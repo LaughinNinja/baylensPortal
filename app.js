@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.set('view engine', 'ejs');
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 //static files
 app.use(express.static('public'));
