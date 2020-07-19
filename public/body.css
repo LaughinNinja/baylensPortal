@@ -1,0 +1,37 @@
+.copyright p{
+    position: absolute;
+    bottom: auto;
+    width: 50%;
+}
+
+
+form{
+    margin: 10px;
+    align-items: center;
+    display: flex;
+}
+
+form input{
+    border-style: solid;
+    border-width: 2px;
+    height: 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form div{
+    flex-direction: column;
+    height: 150px;
+    width: 100px;
+}
+
+form div .message{
+    height: 200px;
+    width: 400px;
+}
+form button{
+    height: 15px;
+    width: 50px
+}
