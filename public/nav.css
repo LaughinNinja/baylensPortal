@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     border-style: none;
+    overflow: hidden;
 }
 
 nav {
@@ -26,7 +27,7 @@ nav {
 .menu {
     display: flex;
     width: 50%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .menu li{
@@ -35,7 +36,7 @@ nav {
 
 .menu a{
     justify-content: center;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -62,13 +63,13 @@ nav {
 
 @media screen and (max-width:768px){
     body{
-        overflow-x: hidden;
+        overflow: hidden;
     }
     .menu{
         position: absolute;
         right: 0px;
         height: 92vh;
-        width: 30%;
+        width: 20%;
         top: 8vh;
         background-color: rgb(86, 54, 230);
         display: flex;
@@ -90,6 +91,7 @@ nav {
 
 .nav-active{
     transform: translateX(0%);
+    overflow: hidden;
 }
 
 @keyframes navLinkFade{

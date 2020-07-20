@@ -6,19 +6,18 @@
 
 	<body>
 		<%- include('./partials/nav.ejs') %>
-        <form>
+        <form class="contactform">
             <div>
-            <label for="name" id="name">Name:</label><br><br>
-            <label for="number" id="number">Number:</label><br><br>
-            <label for="text" id="email" name="email">Email:</label><br><br>
-            <label for="text" id="address" name="address">Message:</label><br><br>
+                <label>Name:</label>
+                <input type="text">
+            </div><div>
+                <label>Email:</label>
+                <input type="text"><br>
+            </div><div>
+                <label>Phone:</label>
+                <input type="number"><br>
             </div>
-            <div>
-            <input type="text" id="name" name="name" class="name"><br>
-            <input type="number" id="number" name="number" class="number"><br>
-            <input type="text" id="email" name="email" class="email"><br>
-            <input type="text" id="message" name="message" class="message"><br>
-            <button>Submit</button>
+                <button>Submit</button>
             </div>
 
         </form><br>
