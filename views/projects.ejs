@@ -2,11 +2,40 @@
 <html lang="en">
 	<head>
 		<%- include('./partials/header.ejs') %>
+		<link rel="stylesheet" type="text/css" href="pro-retro.css">
 	</head>
 
 	<body>
 		<%- include('./partials/nav.ejs') %>
+		<h1>Project Retroverse</h1>
 
+        <table>
+            <tr>
+                <th>mouse tracker</th>
+            </tr>
+            <tr>
+                <td id="b1">box 1</td>
+                <td id="b2">box 2</td>
+                <td id="b3">box 3</td>
+                <td id="b4">box 4</td>
+            </tr>
+            <tr>
+                <td id="b5">box 5</td>
+                <td id="b6">box 6</td>
+                <td id="b7">box 7</td>
+                <td id="b8">box 8</td>
+            </tr>
+            <tr>
+                <td id="b9">box 9</td>
+                <td id="b10">box 10</td>
+                <td id="b11">box 11</td>
+                <td id="b12">box 12</td>
+            </tr>
+		</table><br>
+		<div class="retrodiv">
+			<p>This project was a simple mouse tracker, as you pass over the objects a value is passed to the program to let the computer know where you are. Future commits will add a NES controller sprite animation to mimic 80s retro games UI.</p>
+		</div>
+        <script src="pro-retro.js"></script>
 		
 		<%- include('./partials/footer.ejs') %>
 	</body>

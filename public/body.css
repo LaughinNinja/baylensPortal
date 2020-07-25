@@ -28,3 +28,11 @@
     padding: 5px;
     margin: 10px;
 }
+
+.blog h2{
+    font-family: unset;
+}
+
+.blog p{
+    font-family: unset;
+}
