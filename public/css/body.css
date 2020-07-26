@@ -1,0 +1,47 @@
+.foot{
+    position: relative;
+    bottom: 0;
+    padding: 5px;
+    margin: 10px;
+}
+
+.contactform {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 25vh;
+}
+    
+
+.contactform label{
+    font-family: 'Roboto', sans-serif;
+}
+
+.contactform input{
+    border-style: solid;
+}
+
+.contactform button{
+    width: 60px;
+    border-style: solid;
+}
+
+.blog{
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.blog h2{
+    font-family: 'Oswald', sans-serif;
+}
+
+.blog p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile{
+    margin: 50px;
+}

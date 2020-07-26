@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact', {title: 'Contact'});
 });
+app.get('/blog', (req, res) => {
+    res.render('blog', {title: 'Blog'});
+});
 app.get('/about', (req, res) => {
     res.render('about', {title: 'About'});
 });
