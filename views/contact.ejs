@@ -5,24 +5,27 @@
 	</head>
 
 	<body>
-		<%- include('./partials/nav.ejs') %>
+        <%- include('./partials/nav.ejs') %>
+        <form>
             <div class="form">
                 <label>Name: </label>
-                <input type="text">
+                <input type="text" id="name">
             </div>
             <div class="form">
                 <label>Email: </label>
-                <input type="text"><br>
+                <input type="text" id="email"><br>
             </div>
             <div class="form">
                 <label>Phone:</label>
-                <input type="number"><br>
+                <input type="number" id="phone"><br>
             </div><br>
             <div class="form">
                 <label>Message: </label><br>
-                <textarea class="msg"></textarea>
+                <textarea class="msg" id="msg"></textarea>
             </div><br>
-                <button class="sub">Submit</button>
-		<%- include('./partials/footer.ejs') %>
+                <button class="sub" id="sub">Submit</button>
+        </form>
+        <%- include('./partials/footer.ejs') %>
+        <script src="js/contact"></script>
 	</body>
 </html>
