@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
+const sendMail = require('./public/js/contact.js');
 const path = require('path');
-const bodyparser = require('body-parser');
-const exphbs = require('express-handlebars');
+const log = console.log;
 
-app.engine('handlebars', exphbs());
 app.set('view engine', 'ejs');
 
 app.listen(process.env.PORT || 3000);
@@ -13,8 +12,10 @@ app.listen(process.env.PORT || 3000);
 app.use(express.static('public'));
 
 //Data parse
-app.use(bodyparser.urlencoded({ extended: false }));
-app.use(bodyparser.json());
+app.use(express.urlencoded({
+    extended: false
+}));
+app.use(express.json());
 
  //routes
 app.get('/', (req, res) => {
@@ -33,8 +34,21 @@ app.get('/projects', (req, res) => {
     res.render('projects', {title: 'Projects'});
 });
 
-app.post('/send', (req, res) => {
-        
+app.post('/email', (req, res) => {
+    // res.sendFile(path.join(__dirname + '/contact-us.html'));
+    //TODO
+    //send email here
+    const { name, subject, email, text } = req.body;
+    console.log('Data: ', req.body);
+
+    sendMail(name, email, subject, text, function(err, data) {
+        if (err) {
+            res.status(500).json({ message: 'Internal Error' });
+        } else {
+            res.status({ message: 'Email sent!!!' });
+        }
+    });
+    // res.json({ message: 'Message received!!!' })
 });
 
 app.use((req, res) => {

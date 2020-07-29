@@ -6,7 +6,7 @@
 
 	<body>
         <%- include('./partials/nav.ejs') %>
-        <form id="formula" method="POST" action="/send">
+        <form>
             <div class="form">
                 <label>Name: </label>
                 <input type="text" id="name">
@@ -23,8 +23,30 @@
                 <label>Message: </label><br>
                 <textarea class="msg" id="msg"></textarea>
             </div><br>
-                <input type="submit" value="Submit" class="sub">
+                <input type="submit" class="sub">
         </form>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <script>
+            $('form').on('submit', (e) => {
+    // e.preventDefault();
+
+    const name = $('#name').val().trim();
+    const email = $('#email').val().trim();
+    const subject = $('#name').val().trim();
+    const text = $('#msg').val().trim();
+
+    const data = {
+        name,
+        email,
+        subject,
+        text
+    };
+
+    $.post('/email', data, function() {
+        console.log('Server recieved our data');
+    });
+});
+        </script>
         <%- include('./partials/footer.ejs') %>
 	</body>
 </html>
