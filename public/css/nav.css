@@ -99,10 +99,12 @@ nav {
     from{
         opacity: 0;
         transform: translateX(50px);
+        overflow-x: hidden;
     }
     to{
         opacity: 1;
         transform: translateX(0px);
+        overflow: hidden;
     }
 }
 

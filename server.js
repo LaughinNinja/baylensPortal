@@ -1,11 +1,21 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+const bodyparser = require('body-parser');
+const exphbs = require('express-handlebars');
+
+app.engine('handlebars', exphbs());
 app.set('view engine', 'ejs');
 
 app.listen(process.env.PORT || 3000);
 
 //static files
 app.use(express.static('public'));
+
+//Data parse
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
+
  //routes
 app.get('/', (req, res) => {
     res.render('index', {title: 'Home'});
@@ -21,6 +31,10 @@ app.get('/about', (req, res) => {
 });
 app.get('/projects', (req, res) => {
     res.render('projects', {title: 'Projects'});
+});
+
+app.post('/send', (req, res) => {
+        
 });
 
 app.use((req, res) => {

@@ -6,7 +6,7 @@
 
 	<body>
         <%- include('./partials/nav.ejs') %>
-        <form>
+        <form id="formula" method="POST" action="/send">
             <div class="form">
                 <label>Name: </label>
                 <input type="text" id="name">
@@ -23,9 +23,8 @@
                 <label>Message: </label><br>
                 <textarea class="msg" id="msg"></textarea>
             </div><br>
-                <button class="sub" id="sub">Submit</button>
+                <input type="submit" value="Submit" class="sub">
         </form>
         <%- include('./partials/footer.ejs') %>
-        <script src="js/contact"></script>
 	</body>
 </html>
